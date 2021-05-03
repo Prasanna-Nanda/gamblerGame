@@ -38,9 +38,11 @@ totalAmount = i+ stake;
 
 if (totalAmount == 150) {
 console.log(i + "lost amount: " + totalAmount);
+Gambler.set(i,totalAmount)
 } else {
 amount_lose = amount_lose + totalAmount
 console.log(i +"won amount: " + totalAmount);
+Gambler.set(i,totalAmount)
 }
- gettotalAmount();
+ totalAmount();
 
