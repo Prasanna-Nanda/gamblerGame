@@ -31,9 +31,16 @@ function getGambler() {
     }
 
 function totalAmount() {
+
+  for (let i = 1; i <= 20; i++) {
+    let totalAmount = 0;
+totalAmount = i+ stake;
+
 if (totalAmount == 150) {
+console.log(i + "lost amount: " + totalAmount);
 } else {
 amount_lose = amount_lose + totalAmount
+console.log(i +"won amount: " + totalAmount);
 }
  gettotalAmount();
 
