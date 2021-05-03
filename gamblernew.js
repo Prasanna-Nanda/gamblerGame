@@ -1,4 +1,10 @@
 console.log("welcome to Gambler Game")
+const prompt = require('prompt-sync')();
+let utility = require('./class_gambler')
+let monthlyBets = require('./bets_gambler')
+// const Game = new utility.Gambler()
+// const SetMonth = new monthlyBets.Monthly_Bets()
+
 
 let stake = 100;
 let wins = 0;
@@ -58,3 +64,14 @@ Gambler.set(i,totalAmount)
 
  totalAmount();
 
+function gettotalAmount(amount_won, amount_lose){
+  let finalAmount = 0;
+  if (amount_won > amount_lose){
+    finalAmount = amount_won - amount_lose
+    console.log("total amount won", finalAmount)
+  }else{
+    finalAmount = amount_lose - amount_won
+    console.log("total Amount lose", finalAmount)
+  }
+  return finalAmount;
+}
