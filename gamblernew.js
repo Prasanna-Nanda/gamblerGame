@@ -32,17 +32,29 @@ function getGambler() {
 
 function totalAmount() {
 
-  for (let i = 1; i <= 20; i++) {
+luckyday = [];
+unluckyday = [];
+
+for (let i = 1; i <= 20; i++) {
     let totalAmount = 0;
 totalAmount = i+ stake;
 
 if (totalAmount == 150) {
 console.log(i + "lost amount: " + totalAmount);
 Gambler.set(i,totalAmount)
+ SetMonth.setMapValues(i, totalAmount)
+      luckyday.push(i);
 } else {
 amount_lose = amount_lose + totalAmount
 console.log(i +"won amount: " + totalAmount);
 Gambler.set(i,totalAmount)
+  SetMonth.setMapValues(i, totalAmount)
+      unluckyday.push(i);
 }
+ console.log(SetMonth.getMapValues());
+  console.log("lucky day: " + luckyday);
+  console.log("Unlucky day: " + unluckyday);
+}
+
  totalAmount();
 
